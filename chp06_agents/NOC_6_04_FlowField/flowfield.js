@@ -36,7 +36,7 @@ class FlowField {
       let yoff = 0;
       for (let j = 0; j < this.rows; j++) {
         let theta = map(noise(xoff, yoff), 0, 1, 0, TWO_PI);
-        //let theta = map(sin(xoff)+cos(yoff),-2,2,0,TWO_PI);
+        // let theta = map(sin(xoff)+cos(yoff),-2,2,0,TWO_PI);
         // Polar to cartesian coordinate transformation to get x and y components of the vector
         this.field[i][j] = createVector(cos(theta), sin(theta));
         yoff += 0.1;

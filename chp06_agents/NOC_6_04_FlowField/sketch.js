@@ -25,10 +25,11 @@ function setup() {
   for (let i = 0; i < 120; i++) {
     vehicles.push(new Vehicle(random(width), random(height), random(2, 5), random(0.1, 0.5)));
   }
+
 }
 
 function draw() {
-  background(51);
+
   // Display the flowfield in "debug" mode
   if (debug) flowfield.display();
   // Tell all the vehicles to follow the flow field
@@ -36,17 +37,19 @@ function draw() {
     vehicles[i].follow(flowfield);
     vehicles[i].run();
   }
-
+  background(0, 5);
 }
 
 
 function keyPressed() {
   if (key == ' ') {
     debug = !debug;
+    background(0);
   }
 }
 
 // Make a new flowfield
 function mousePressed() {
   flowfield.init();
+  background(0);
 }

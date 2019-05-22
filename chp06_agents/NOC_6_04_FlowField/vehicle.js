@@ -9,7 +9,7 @@ class Vehicle {
     this.position = createVector(x, y);
     this.acceleration = createVector(0, 0);
     this.velocity = createVector(0, 0);
-    this.r = 4;
+    this.r = 0.5;
     this.maxspeed = ms || 4;
     this.maxforce = mf || 0.1;
   }
@@ -60,9 +60,9 @@ class Vehicle {
   display() {
     // Draw a triangle rotated in the direction of velocity
     let theta = this.velocity.heading() + PI / 2;
-    fill(127);
-    stroke(200);
-    strokeWeight(1);
+    fill(255);
+    stroke(0, 0, 255);
+    strokeWeight(0.5);
     push();
     translate(this.position.x, this.position.y);
     rotate(theta);
